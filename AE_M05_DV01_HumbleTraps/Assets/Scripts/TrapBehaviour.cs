@@ -29,13 +29,18 @@ public class Trap
         {
             if(trapTargetType == TrapTargetType.Player)
                 characterMover.Health--;
+            if (trapTargetType == TrapTargetType.Player)
+                characterMover.Strength--;
         }
         else
         {
             if (trapTargetType == TrapTargetType.Npc)
                 characterMover.Health--;
+
+            if (trapTargetType == TrapTargetType.Vampire)
+                characterMover.Health++;
         }
     }
 }
 
-public enum TrapTargetType { Player, Npc  };
+public enum TrapTargetType { Player, Npc, Vampire  };

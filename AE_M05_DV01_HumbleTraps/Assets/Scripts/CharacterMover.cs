@@ -10,6 +10,8 @@ public class CharacterMover : MonoBehaviour, ICharacterMover
 
     public int Health { get; set; }
 
+    public int Strength { get; set; }
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
